@@ -59,12 +59,12 @@ The script will automatically:
 
 ---
 
-## Question 1.2: [To be completed]
+## Question 1.2:
 
-[To be filled in by teammates]
+
 
 ---
 
-## Question 1.3: [To be completed]
+## Question 1.3: 
 
-[To be filled in by teammates]
+
