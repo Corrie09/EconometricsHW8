@@ -82,7 +82,7 @@ The script will automatically:
 ### Installation
 Run the following command to install dependencies:
 ```bash
-pip install pandas>=2.3.3 numpy>=2.3.5 statsmodels>=0.14.5
+pip install pandas>=2.3.3 statsmodels>=0.14.5
 ```
 
 Alternatively, if using `uv`:
