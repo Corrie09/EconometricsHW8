@@ -62,6 +62,82 @@ The script will automatically:
 
 ## Question 1.2:
 
+---
+
+## Requirements
+
+### Python Version
+- `requires-python = ">=3.13"`
+
+### Required Packages
+- `pandas>=2.3.3`
+- `statsmodels>=0.14.5`
+
+### Installation
+Run the following command to install dependencies:
+```bash
+pip install pandas>=2.3.3 statsmodels>=0.14.5
+```
+
+Alternatively, if using `uv`:
+```bash
+uv sync
+```
+
+---
+
+## Dataset
+
+**Filename:** `assignment8.dta`
+
+**Format:** Stata data file
+
+**Structure:** Panel data with two observations per restaurant (Wave 1: pre-treatment, Wave 2: post-treatment)
+
+---
+
+## How to Run the Code
+
+1. Open `assignment8_q3.ipynb` 
+2. Ensure `assignment8.dta` is in the same directory as Notebook file
+3. Run all cells sequentially
+
+---
+
+## What the Script Does
+
+### 1. Loads the Dataset
+Reads `assignment8.dta` 
+
+### 2a. Creates the Dataset to Match Original n = 357
+Using chaining, the code selects variables, creates the appropriate target variable, applies filters, does one hot encoding, and cleans the data for modeling.
+- this uses FTE = full time + 0.5 * part time + managers
+- store filter: existence FTE = full time + 0.5 * part time AND nmgrs is not missing in second period
+- this method allows for missingness in managers data only for the second period to match the desired n = 357
+
+### 2b. Creates the Dataset to Match Original Target Var Definition (FTE)
+Using chaining, the code selects variables, creates the appropriate target variable, applies filters, does one hot encoding, and cleans the data for modeling.
+- this uses FTE = full time + 0.5 * part time + managers
+- store filter: existence FTE = full time + 0.5 * part time + nmgrs 
+- this methods follows the FTE definition in detail and retains a smaller set of the sample (n = 351)
+
+### [OPTIONAL] 3. Validates Creation of Data in 2b by Comparing Disrepancies and Characteristics
+Sees differences in stores used from dataset in 2a and 2b. Then, characteristics (especially missingness of the nmgrs data) are compared to validate the decisions that arrive at n = 357.
+
+### 4. Runs Model 1a of Card and Kruger (1944) on Datasets in 2a and 2b With and Without Controls
+The full form equation, d_E ~ state + co_owned + chain_K + chain_R + chain_W, and reduced form without controls, d_E ~ state, are ran for both samples with 351 stores and 357 stores.
+
+## Expected Output
+Four model summaries. The summaries contain estimates of the following specifications:
+1. No controls, n = 351
+2. Controls, n = 351
+3. No controls, n = 357
+4. Controls, n = 357
+
+
+## Notes
+Section 3 is optional (validation). Commentary is provided on the results.
+
 
 
 ---
