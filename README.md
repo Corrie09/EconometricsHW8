@@ -68,15 +68,6 @@ The script will automatically:
 
 ## Question 1.3: 
 
-# Card and Krueger (1994) Minimum Wage Analysis - Price Effects
-## Assignment 8, Question 1.3: Impact on Full Meal Prices
-
----
-
-## Overview
-
-This code analyzes the effect of New Jersey's minimum wage increase on full meal prices in fast-food restaurants using a difference-in-differences approach. It replicates Question 1.3 from Card and Krueger (1994), examining whether restaurants adjusted prices in response to the policy change.
-
 ---
 
 ## Requirements
@@ -86,7 +77,6 @@ This code analyzes the effect of New Jersey's minimum wage increase on full meal
 
 ### Required Packages
 - `pandas>=2.3.3`
-- `numpy>=2.3.5`
 - `statsmodels>=0.14.5`
 
 ### Installation
