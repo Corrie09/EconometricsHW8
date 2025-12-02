@@ -114,16 +114,8 @@ uv sync
 
 ## How to Run the Code
 
-### Option 1: Python Script
-1. Ensure `assignment8.dta` is in the same directory as the script
-2. Run:
-```bash
-   python assignment8_q3.py
-```
-
-### Option 2: Jupyter Notebook
 1. Open `assignment8_q3.ipynb` 
-2. Ensure the dataset and Notebook file are in the same folder
+2. Ensure `assignment8.dta` is in the same directory as Notebook file
 3. Run all cells sequentially
 
 ---
