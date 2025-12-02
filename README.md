@@ -3,7 +3,7 @@
 ## Overview
 This folder contains all materials required for Assignment 8. It includes:
 - **PDF report** with analytical answers and all required figures/tables
-- **Stata do-files** used for replication of figures and tables
+- **python files** used for replication of figures and tables
 - **Dataset** (`assignment8.dta`) required to run the code
 
 ## Folder Structure
