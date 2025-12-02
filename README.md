@@ -1,4 +1,4 @@
-markdown# Policy Evaluation Assignment 8: Difference-in-Differences
+# Policy Evaluation Assignment 8: Difference-in-Differences
 
 ## Overview
 This folder contains all materials required for Assignment 8. It includes:
