@@ -11,6 +11,7 @@ This folder contains all materials required for Assignment 8. It includes:
 assignment8_folder/
 ├── EconometricsHW8.pdf
 ├── assignment8_q1.py
+├── assignment8_q2.ipynb
 ├── assignment8_q3.ipynb
 ├── assignment8.dta
 └── README.md
