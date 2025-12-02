@@ -1,0 +1,17 @@
+[project]
+name = "econometricshw8"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "matplotlib>=3.10.7",
+    "pandas>=2.3.3",
+    "seaborn>=0.13.2",
+    "statsmodels>=0.14.5",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.1.0",
+]
