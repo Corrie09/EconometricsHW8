@@ -10,7 +10,7 @@ This folder contains all materials required for Assignment 8. It includes:
 ```
 assignment8_folder/
 ├── EconometricsHW8.pdf
-├── assignment8_q1.do
+├── assignment8_q1.py
 ├── assignment8_q3.ipynb
 ├── assignment8.dta
 └── README.md
@@ -28,30 +28,40 @@ Corneel Moons
 
 ---
 
-## Question 1.1: Replication of Figure 1
+## Question 1.1:
 
 ### Requirements
-- Stata 17 or later
+- Python 3.13 or later
+- Required packages:
+  - `pandas>=2.3.3`
+  - `numpy>=2.3.5`
+  - `matplotlib>=3.9.0`
 - Dataset: `assignment8.dta`
 
 ### How to Run the Code
-1. Open Stata
-2. Set the working directory to the project folder
-3. Run the do-file: `assignment8_q1.do`
+1. Ensure the dataset `assignment8.dta` is in the same folder as the script
+2. Run the Python script: `assignment8_q1.py`
 
 The script will automatically:
 - Load the dataset `assignment8.dta`
+- Calculate wage distribution percentages for each state and time period
 - Generate **Figure 1a**: Distribution of starting wages in February 1992 (before minimum wage increase)
 - Generate **Figure 1b**: Distribution of starting wages in November 1992 (after minimum wage increase)
 - Save figures as `figure1_feb1992.png` and `figure1_nov1992.png`
+- Print diagnostic statistics to console
 
 ### Expected Output
-- `figure1_feb1992.png`: Shows similar wage distributions in NJ and PA before the policy change
-- `figure1_nov1992.png`: Shows dramatic divergence, with NJ wages clustering at $5.05 (new minimum)
+- `figure1_feb1992.png`: Shows similar wage distributions in NJ and PA before the policy change, with both states having wages clustered around $4.25
+- `figure1_nov1992.png`: Shows dramatic divergence, with approximately 85% of NJ stores clustering at $5.05 (new minimum wage), while PA distribution remains relatively unchanged
 
 ### Notes
-- The code uses overlapping histograms (rather than side-by-side bars) to make the comparison clearer
-- Ensure that `assignment8.dta` is located in the same folder as the do-file
+- The code uses side-by-side bars matching the original paper's presentation style
+- Black solid bars represent New Jersey stores
+- White hatched bars represent Pennsylvania stores
+- Bins are defined as 10-cent intervals from $4.25 to $5.65 (14 bins total)
+- The visualization includes light horizontal gridlines for easier reading
+- All percentages are calculated relative to the total number of stores in each state-time combination
+- Ensure that `assignment8.dta` is located in the same folder as the Python script
 
 ### Key Variables Used
 - `state`: 1 = New Jersey, 0 = Pennsylvania
